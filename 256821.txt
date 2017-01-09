@@ -1,0 +1,21 @@
+Skrypt wczytuje dane z pliku typu csv (wejscie.csv) - rozdzielanego przecinkami. Przyjmuje dowolną liczbę zmiennych/wierszy.
+Weryfikuje poprawność podanych liczb oraz operatorów. 
+Przedostatnia kolumna w pliku csv przyjmuje następujące parametry:
+<= (mniejsze bądź równe)
+>= (większe bądź równe)
+==> (oznaczenie funkcji celu, służy do jednoznacznej identyfikacji wiersza)
+Ostania kolumna przyjmuje wartości zmiennych bazowych, a w przypadku wiersza z funkcją celu przyjuje co jest poszukiwane (MIN lub MAX)
+W zależności od parametrów oraz funkcji celu współczynniki są odpowiednio przeliczane (przemnażane).
+Drugim sposobem jest ręczna modyfikacja skryptu, wyniki można uzyskać wywołując 3 metody klasy Simplex:
+
+	#alter = Simpex([-1,-3,-2])
+	#alter.dodajWiersz([1, 2, 1], 5)
+    #alter.dodajWiersz([1, 1, 1], 4)
+    #alter.dodajWiersz([0, 1, 2], 1)
+    #alter.wynik()
+	
+Wyniki każdej z iteracji wyświetlane są w konsoli oraz zapisywane do pliku txt (wyjscie.txt).
+Rozwiązaniem jest zawsze pierwszy wiersz tabelki (pierwsza kolumna tabelki jest pomocnicza i nie zawiera obliczeń).
+Przy realizacji projektu skorzystałem z biblioteki 'numpy'.
+
+Kamil Pęciak, 256821
